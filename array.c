@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <PIC18F4550.h>
+void main(void)
+{
+    int i, sum, n;
+    int number[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    sum = 0;
+    for (i = 0; i <= 9; i++)
+    {
+        sum = sum + number[i];
+    }
+    TRISB = 0;
+    PORTB = sum;
+}
